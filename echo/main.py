@@ -1,8 +1,7 @@
 from subprocess import Popen, PIPE
 
-from telegram.ext import Filters
 from telegram import Bot, Update
-from telegram.ext import Updater
+from telegram.ext import Updater, Filters
 from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler
 
