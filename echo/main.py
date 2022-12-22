@@ -6,7 +6,7 @@ from telegram.ext import Updater
 from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler
 
-from config import TG_TOKEN
+from config import load_config
 
 
 def do_start(bot: Bot, update: Update):
@@ -48,8 +48,9 @@ def do_echo(bot: Bot, update: Update):
 
 
 def main():
+    config = load_config()
     bot = Bot(
-        token=TG_TOKEN,
+        token=config.TG_TOKEN,
     )
     updater =Updater(
         bot=bot,
